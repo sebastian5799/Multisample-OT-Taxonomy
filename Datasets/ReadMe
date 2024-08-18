@@ -1,1 +1,3 @@
-
+The file scRNAdata.r shows examples of loading data from the Bioconductor R Package and the general processing of the data.
+The full list of scRNA-seq datasets found in this package as well as the code to load them can be found here:
+https://bioconductor.org/packages/devel/data/experiment/manuals/scRNAseq/man/scRNAseq.pdf
