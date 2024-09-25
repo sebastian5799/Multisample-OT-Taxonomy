@@ -1,3 +1,9 @@
-The file scRNAdata.r shows examples of loading data from the Bioconductor R Package and the general processing of the data.
+The R Notebook file DataLoading.rmd shows an example of loading a scRNA-seq dataset using the Bioconductor R Package.
 The full list of scRNA-seq datasets found in this package as well as the code to load them can be found here:
 https://bioconductor.org/packages/devel/data/experiment/manuals/scRNAseq/man/scRNAseq.pdf
+In the file we employ very simple and common processing of the dataset. For more details and other complicated tools that process the data see:
+Orchestrating Single-Cell Analysis with Bioconductor by Amezquita et al (https://bioconductor.org/books/3.12/OSCA/). After applying PCA to the 
+processed dataset we compute the variance and the mean vector for every cell cluster per sample on the reduced space. This information along with
+the cluster proportions relative to their samples and number of cells per cluster are stored in a list.
+
+
