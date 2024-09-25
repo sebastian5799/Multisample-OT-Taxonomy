@@ -4,6 +4,6 @@ https://bioconductor.org/packages/devel/data/experiment/manuals/scRNAseq/man/scR
 In the file we employ very simple and common processing of the dataset. For more details and other complicated tools that process the data see:
 Orchestrating Single-Cell Analysis with Bioconductor by Amezquita et al (https://bioconductor.org/books/3.12/OSCA/). After applying PCA to the 
 processed dataset we compute the variance and the mean vector for every cell cluster per sample on the reduced space. This information along with
-the cluster proportions relative to their samples and number of cells per cluster are stored in a list.
+the cluster proportions relative to their samples and number of cells per cluster are stored in a list to be fed to our Matlab code.
 
 
