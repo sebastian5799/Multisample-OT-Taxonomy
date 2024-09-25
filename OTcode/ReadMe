@@ -1,2 +1,2 @@
 OT.m is the function code that implements Optimal Transport
-otrmcl1.m is the main function code that implements Optimal Transport with marginal constraints. 
+otrmcl1.m is the function code that implements Optimal Transport with marginal constraints. 
