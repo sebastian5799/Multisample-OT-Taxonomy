@@ -1,2 +1,6 @@
-OT.m is the function code that implements Optimal Transport
+OT.m is the function code that implements Optimal Transport.
 otrmcl1.m is the function code that implements Optimal Transport with marginal constraints. 
+Both of these functions make use the MOSEK optimization software. The download page of this
+software is: https://www.mosek.com/downloads/ while the academic license request site is:
+https://www.mosek.com/products/academic-licenses/
+
