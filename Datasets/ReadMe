@@ -1,13 +1,17 @@
-The R Notebook file DataLoading.rmd shows an example of loading a scRNA-seq dataset using the Bioconductor R open-source software.
-The installation code for the Bioconductor libraries used in the notebook are found in: https://bioconductor.org/packages/3.19/bioc/
-The full list of scRNA-seq datasets stored by Bioconductor as well as the code to load them into R can be found here:
-https://bioconductor.org/packages/devel/data/experiment/manuals/scRNAseq/man/scRNAseq.pdf
-In our study we employ very simple and common processing to the loaded dataset using Bioconductor commands. For details on the purpose and mechanism 
-of these commands see: Orchestrating Single-Cell Analysis with Bioconductor by Amezquita et al (https://bioconductor.org/books/3.12/OSCA/).
-After applying PCA to the processed dataset we compute the variance and the mean vector for every cell cluster per sample on the reduced space. This information along with
-the cluster proportions relative to their samples and number of cells per cluster are stored in a list to be fed to the Matlab code. Two examples of formatted data are:
-* baronpc: Baron Pancreas dataset. It has 4 real samples.
-* segerSL: This dataset includes 20 simulated samples (10 for each class of patient healthy vs type 2 diabetes)
+The R Notebook file DataLoading.rmd shows an example of loading a scRNA-seq dataset using the Bioconductor R 
+open-source software. The installation code for the Bioconductor libraries used in the notebook are found in:
+https://bioconductor.org/packages/3.19/bioc/
+The full list of scRNA-seq datasets stored by Bioconductor as well as the code to load them into R 
+can be found here: https://bioconductor.org/packages/devel/data/experiment/manuals/scRNAseq/man/scRNAseq.pdf
+In our study we employ very simple and common processing to the loaded dataset using Bioconductor commands. 
+For details on the purpose and mechanism of these commands see: Orchestrating Single-Cell Analysis with 
+Bioconductor by Amezquita et al (https://bioconductor.org/books/3.12/OSCA/). 
+After applying PCA to the processed dataset we compute the variance and the mean vector for every cell cluster
+per sample on the reduced space. This information along withthe cluster proportions relative to their samples 
+and number of cells per cluster are stored in a list to be fed to the Matlab code. Two examples of formatted 
+data are:
+- baronpc: Baron Pancreas dataset. It has 4 real samples.
+- segerSL: This dataset includes 20 simulated samples (10 for each class of patient healthy vs type 2 diabetes).
 
 
 
