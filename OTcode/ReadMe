@@ -1,6 +1,15 @@
-OT.m is the function code that implements Optimal Transport.
-otrmcl1.m is the function code that implements Optimal Transport with marginal constraints. 
-Both of these functions make use the MOSEK optimization software. The download page of this
+A description of the files in this folder:
+* OT.m is the function code that implements Optimal Transport.
+* otrmcl1.m is the function code that implements Optimal Transport with marginal constraints. 
+* CostMat.m is a the function that computes a cost matrix between 2 samples. It uses the Wasserstein distance.
+* OT_SA.mlx is a Matlab notebook with details and code on how to build a taxonomy using regular OT.
+* OT_RMC.mlx is a Matlab notebook with details on how to build a taxonomy using OTRMC. This is
+  our proposed method
+* ClassifySample.mlx is a Matlab notebook with details and code on how to use taxonomy to classify samples.
+* baseTax.m is a Matlab script that uses  OT.m and otrmcl1.m for Reference Aligment. We use this approach as 
+  a baseline for which to compare our method. 
+
+The OT.m and otrmcl1.m functions make use the MOSEK optimization software. The download page of this
 software is: https://www.mosek.com/downloads/ while the academic license request site is:
 https://www.mosek.com/products/academic-licenses/
 
