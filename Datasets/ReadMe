@@ -18,13 +18,13 @@ vertically with the vectorized covariance matrix. All stacked vectors, correspod
 are then horizontally concatenated into a single matrix called supp. As an example, if the number of principal
 components for a scRNA-seq dataset is 2 then the number of rows of its supp matrix is 6, while 50 principal 
 components would imply 2550 rows for supp. The number of  columns is equal to the total number of clusters in all
-samples. The cluster proportions are stored as a vector as ww. The vector cellspat stores the number of cells per
+samples. The cluster proportions are stored as a vector as ww. The vector numpersample stores the number of cells per
 sample. Its length is equal to the number of samples. The vector stride stores the number of clusters per sample. It 
-has the same length as cellspat. Lastly we also store the ground truth label of all clusters in the cell array 
-cellnames. The objects supp, ww, cellspat, stride, and cellnames are placed in a single list and saved as a .mat object.
+has the same length as numpersample. Lastly we also store the ground truth label of all clusters in the cell array 
+cellnames. The objects supp, ww, numpersample, stride, and cellnames are placed in a single list and saved as a .mat object.
 Two examples of formatted datasets are:
 - baronpc: Baron Pancreas dataset. It has 4 real samples.
 - segerSL: This dataset includes 20 simulated samples (10 for each class of patient healthy vs type 2 diabetes).
-
+The R Notebook file DataLoading.rmd shows the code and detail for the described procedure
 
 
