@@ -1,3 +1,4 @@
+# Pulling scRNA-seq Datasets in R
 The datasets used in the paper all can be pulled using the R library scRNAseq. This library belongs to Bioconductor,
 an open-source software project. This project hosts many libraries with different tools for analyzing scRNA-seq data.
 The installation code for the Bioconductor libraries used in the notebook are found in:
@@ -8,10 +9,20 @@ can be found in: https://bioconductor.org/packages/devel/data/experiment/manuals
 For our study we employ simple and standard processing Bioconductor functions to the datasets. 
 For details on the purpose and mechanism of these commands see: Orchestrating Single-Cell Analysis with 
 Bioconductor by Amezquita et al (https://bioconductor.org/books/3.12/OSCA/). 
-After applying PCA to the processed dataset we compute the variance and the mean vector for every cell cluster
-per sample on the reduced space. This information along with the cluster proportions relative to their samples 
-and number of cells per cluster are stored in a list to be fed to the Matlab code. Two examples of formatted 
-data are:
+
+# Formatting Data for Matlab Loading
+After applying PCA to the processed dataset we compute the covariance matrix and the mean vector for every cell
+cluster per sample on the reduced space. We also determine cluster proportions relative to the samples they belong 
+to, the number of cells per sample, and the number of clusters per sample. The mean vector of a cluster is stacked 
+vertically with the vectorized covariance matrix. All stacked vectors, correspoding to all clusters for all samples, 
+are then horizontally concatenated into a single matrix called supp. As an example, if the number of principal
+components for a scRNA-seq dataset is 2 then the number of rows of its supp matrix is 6, while 50 principal 
+components would imply 2550 rows for supp. The number of  columns is equal to the total number of clusters in all
+samples. The cluster proportions are stored as a vector as ww. The vector cellspat stores the number of cells per
+sample. Its length is equal to the number of samples. The vector stride stores the number of clusters per sample. It 
+has the same length as cellspat. Lastly we also store the ground truth label of all clusters in the cell array 
+cellnames. The objects supp, ww, cellspat, stride, and cellnames are placed in a single list and saved as a .mat object.
+Two examples of formatted datasets are:
 - baronpc: Baron Pancreas dataset. It has 4 real samples.
 - segerSL: This dataset includes 20 simulated samples (10 for each class of patient healthy vs type 2 diabetes).
 
