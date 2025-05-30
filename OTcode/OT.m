@@ -32,6 +32,6 @@ prob.buc=[transpose(p1);transpose(p2)];
 %param.MSK_IPAR_INFEAS_REPORT_AUTO = 'MSK_ON';
 param.MSK_IPAR_OPTIMIZER = 'MSK_OPTIMIZER_INTPNT'; 
 %the interior point optimizer is used
-param.MSK_IPAR_LOG = 1;
+param.MSK_IPAR_LOG = 0;
 [r,res]=mosekopt('minimize',prob,param);
 end
